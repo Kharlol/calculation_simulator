@@ -6,7 +6,7 @@ from constants import *
 def generate_expression() -> str:
     """
     Генерирует выражение из случайных значений.
-    
+
     Допустимые значения и операторы заданы константами.
     """
     num_operands = randint(MIN_NUM_OPERANDS, MAX_NUM_OPERANDS)
@@ -54,14 +54,14 @@ def calculation_simulator():
     total_answers: int = 0
     correct_answers: int = 0
     num_lives = NUM_LIVES
-    
+
     print(LINE_SYMBOL * LINE_SIZE)
     print(
         START_MSG.center(LINE_SIZE),
         RULES_MSG,
         sep="\n" + LINE_SYMBOL * LINE_SIZE + "\n",
     )
-    
+
     while num_lives >= 0:
         print(
             LINE_SYMBOL * LINE_SIZE,
@@ -70,17 +70,17 @@ def calculation_simulator():
             sep="\n",
             end="\n\n",
         )
-        
+
         task = generate_expression()
         # print(f"Подсмотреть ответ: {eval(task)}".rjust(LINE_SIZE))
-        
+
         print(PROMPT_MSG, task.rjust(LINE_SIZE // 2), end=" = ".ljust(0))
-        
+
         user_answer = input()
-        
+
         if user_answer.strip().lower() == FORCED_END_COMMAND:
             break
-        
+
         total_answers += 1
         if compare_results(task, user_answer):
             correct_answers += 1
