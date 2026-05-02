@@ -4,6 +4,7 @@ MIN_NUM_OPERANDS: int = 2
 MAX_NUM_OPERANDS: int = 5
 MIN_VALUE: int = -100
 MAX_VALUE: int = 100
+
 # Сообщения и значение счетчика жизней
 NUM_LIVES: int = 5
 EXCHANGE_RATE: int = 3
@@ -30,6 +31,7 @@ RULES_MSG: str = (
 END_MSG: str = "Итоги игры:"
 TOTAL_ANSWERS_MSG: str = "Получено ответов: "
 STATISTICS_MSG: str = "% правильных ответов."
+
 # Разметка и визуал
 LIFE_SYMBOL: str = "❤️"
 NO_LIVES_MSG: str = "⭕️"
